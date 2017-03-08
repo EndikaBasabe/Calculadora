@@ -22,6 +22,24 @@ public class Main extends JFrame {
 	private double numero2;
 	private String operadorea;
 	private double resultado;
+	private JButton buttonPlusminus;
+	private JButton buttonIgual;
+	private JButton button7;
+	private JButton button1;
+	private JButton button0;
+	private JButton button4;
+	private JButton buttonPunto;
+	private JButton button8;
+	private JButton button5;
+	private JButton button2;
+	private JButton buttonC;
+	private JButton button3;
+	private JButton button6;
+	private JButton buttonDividir;
+	private JButton button9;
+	private JButton buttonPor;
+	private JButton buttonResta;
+	private JButton buttonSuma;
 	/**
 	 * Launch the application.
 	 */
@@ -48,7 +66,7 @@ public class Main extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JButton button1 = new JButton("1");
+		button1 = new JButton("1");
 		button1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 
@@ -58,7 +76,7 @@ public class Main extends JFrame {
 		});
 		button1.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		JButton button2 = new JButton("2");
+		button2 = new JButton("2");
 		button2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textFieldPantaila.setText(textFieldPantaila.getText() + button2.getText());
@@ -67,7 +85,7 @@ public class Main extends JFrame {
 		});
 		button2.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		JButton button3 = new JButton("3");
+		button3 = new JButton("3");
 		button3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textFieldPantaila.setText(textFieldPantaila.getText() + button3.getText());
@@ -75,7 +93,7 @@ public class Main extends JFrame {
 		});
 		button3.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		JButton buttonSuma = new JButton("+");
+		buttonSuma = new JButton("+");
 		buttonSuma.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				numero1 = Double.parseDouble(textFieldPantaila.getText());
@@ -87,7 +105,7 @@ public class Main extends JFrame {
 		});
 		buttonSuma.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		JButton button4 = new JButton("4");
+		button4 = new JButton("4");
 		button4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textFieldPantaila.setText(textFieldPantaila.getText() + button4.getText());
@@ -95,7 +113,7 @@ public class Main extends JFrame {
 		});
 		button4.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		JButton button5 = new JButton("5");
+		button5 = new JButton("5");
 		button5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textFieldPantaila.setText(textFieldPantaila.getText() + button5.getText());
@@ -103,7 +121,7 @@ public class Main extends JFrame {
 		});
 		button5.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		JButton button6 = new JButton("6");
+		button6 = new JButton("6");
 		button6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textFieldPantaila.setText(textFieldPantaila.getText() + button6.getText());
@@ -111,7 +129,7 @@ public class Main extends JFrame {
 		});
 		button6.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		JButton buttonResta = new JButton("-");
+		buttonResta = new JButton("-");
 		buttonResta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				numero1 = Double.parseDouble(textFieldPantaila.getText());
@@ -122,7 +140,7 @@ public class Main extends JFrame {
 		});
 		buttonResta.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		JButton button7 = new JButton("7");
+		button7 = new JButton("7");
 		button7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textFieldPantaila.setText(textFieldPantaila.getText() + button7.getText());
@@ -130,7 +148,7 @@ public class Main extends JFrame {
 		});
 		button7.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		JButton button8 = new JButton("8");
+		button8 = new JButton("8");
 		button8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textFieldPantaila.setText(textFieldPantaila.getText() + button8.getText());
@@ -138,7 +156,7 @@ public class Main extends JFrame {
 		});
 		button8.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		JButton button9 = new JButton("9");
+		button9 = new JButton("9");
 		button9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textFieldPantaila.setText(textFieldPantaila.getText() + button9.getText());
@@ -146,7 +164,7 @@ public class Main extends JFrame {
 		});
 		button9.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		JButton buttonPor = new JButton("*");
+		buttonPor = new JButton("*");
 		buttonPor.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				numero1 = Double.parseDouble(textFieldPantaila.getText());
@@ -160,7 +178,7 @@ public class Main extends JFrame {
 		textFieldPantaila = new JTextField();
 		textFieldPantaila.setColumns(10);
 		
-		JButton button0 = new JButton("0");
+		button0 = new JButton("0");
 		button0.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textFieldPantaila.setText(textFieldPantaila.getText() + button0.getText());
@@ -168,7 +186,7 @@ public class Main extends JFrame {
 		});
 		button0.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		JButton buttonPunto = new JButton(".");
+		buttonPunto = new JButton(".");
 		buttonPunto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(!esDecimal){
@@ -180,7 +198,7 @@ public class Main extends JFrame {
 		});
 		buttonPunto.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		JButton buttonC = new JButton("C");
+		buttonC = new JButton("C");
 		buttonC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textFieldPantaila.setText("");
@@ -188,7 +206,7 @@ public class Main extends JFrame {
 		});
 		buttonC.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		JButton buttonDividir = new JButton("/");
+		buttonDividir = new JButton("/");
 		buttonDividir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				numero1 = Double.parseDouble(textFieldPantaila.getText());
@@ -199,7 +217,7 @@ public class Main extends JFrame {
 		});
 		buttonDividir.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		JButton buttonIgual = new JButton("=");
+		buttonIgual = new JButton("=");
 		buttonIgual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				numero2 = Double.parseDouble(textFieldPantaila.getText());
@@ -221,14 +239,14 @@ public class Main extends JFrame {
 		});
 		buttonIgual.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		JButton buttonPlusminus = new JButton("+/-");
+		buttonPlusminus = new JButton("+/-");
 		buttonPlusminus.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Double zenbaki = Double.parseDouble(textFieldPantaila.getText());
 				if(zenbaki > 0){
 					zenbaki = zenbaki * -1;
 					textFieldPantaila.setText(String.valueOf(zenbaki));
-				}else{
+				}else if(zenbaki < 0){
 					zenbaki = zenbaki * 1;
 					textFieldPantaila.setText(String.valueOf(zenbaki));
 				}
