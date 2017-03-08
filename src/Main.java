@@ -18,6 +18,10 @@ public class Main extends JFrame {
 	private JPanel contentPane;
 	private JTextField textFieldPantaila;
 	boolean esDecimal = false;
+	private double numero1;
+	private double numero2;
+	private String operadorea;
+	private double resultado;
 	/**
 	 * Launch the application.
 	 */
@@ -74,7 +78,11 @@ public class Main extends JFrame {
 		JButton buttonSuma = new JButton("+");
 		buttonSuma.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textFieldPantaila.setText(buttonSuma.getText());
+				numero1 = Double.parseDouble(textFieldPantaila.getText());
+				operadorea = buttonSuma.getText();
+				textFieldPantaila.setText("");
+				
+				
 			}
 		});
 		buttonSuma.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -106,6 +114,10 @@ public class Main extends JFrame {
 		JButton buttonResta = new JButton("-");
 		buttonResta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				numero1 = Double.parseDouble(textFieldPantaila.getText());
+				operadorea = buttonResta.getText();
+				textFieldPantaila.setText("");
+				
 			}
 		});
 		buttonResta.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -137,6 +149,10 @@ public class Main extends JFrame {
 		JButton buttonPor = new JButton("*");
 		buttonPor.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				numero1 = Double.parseDouble(textFieldPantaila.getText());
+				operadorea = buttonPor.getText();
+				textFieldPantaila.setText("");
+				
 			}
 		});
 		buttonPor.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -167,6 +183,7 @@ public class Main extends JFrame {
 		JButton buttonC = new JButton("C");
 		buttonC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				textFieldPantaila.setText("");
 			}
 		});
 		buttonC.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -174,6 +191,10 @@ public class Main extends JFrame {
 		JButton buttonDividir = new JButton("/");
 		buttonDividir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				numero1 = Double.parseDouble(textFieldPantaila.getText());
+				operadorea = buttonDividir.getText();
+				textFieldPantaila.setText("");
+				
 			}
 		});
 		buttonDividir.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -181,6 +202,21 @@ public class Main extends JFrame {
 		JButton buttonIgual = new JButton("=");
 		buttonIgual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				numero2 = Double.parseDouble(textFieldPantaila.getText());
+				if(operadorea.equals(buttonSuma.getText())){
+					resultado = numero1 + numero2;
+					textFieldPantaila.setText(String.valueOf(resultado));
+				}else if(operadorea.equals(buttonResta.getText())){
+					resultado = numero1 - numero2;
+					textFieldPantaila.setText(String.valueOf(resultado));
+				}else if(operadorea.equals(buttonPor.getText())){
+					resultado = numero1 * numero2;
+					textFieldPantaila.setText(String.valueOf(resultado));
+				}else if(operadorea.equals(buttonDividir.getText())){
+					resultado = numero1 / numero2;
+					textFieldPantaila.setText(String.valueOf(resultado));
+				}
+				
 			}
 		});
 		buttonIgual.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -188,6 +224,14 @@ public class Main extends JFrame {
 		JButton buttonPlusminus = new JButton("+/-");
 		buttonPlusminus.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Double zenbaki = Double.parseDouble(textFieldPantaila.getText());
+				if(zenbaki > 0){
+					zenbaki = zenbaki * -1;
+					textFieldPantaila.setText(String.valueOf(zenbaki));
+				}else{
+					zenbaki = zenbaki * 1;
+					textFieldPantaila.setText(String.valueOf(zenbaki));
+				}
 			}
 		});
 		buttonPlusminus.setFont(new Font("Tahoma", Font.BOLD, 11));
